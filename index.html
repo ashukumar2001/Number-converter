@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Binary Number Converter</title>
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+    <h1>Number Conversion</h1>
+    <div class="content">
+        <p id="color-red"><strong>Note: </strong> Please click on 'select' button after selecting conversion</p>
+        <form action="#" method="post" id="bin_method_sel" class="form">
+                <select name="conversion_methods" id="methods" class="input">
+                    <option value="bin2dec">Binary to Decimal</option>  <!-- done -->
+                    <option value="dec2bin">Decimal to Binary</option> <!-- done -->
+                    <option value="hex2dec">Hexadecimal to Decimal</option> <!-- done -->
+                    <option value="bin2hex">Binary to Hexadecimal</option> <!-- done -->
+                    <option value="dec2hex">Decimal to Hexadecimal</option> <!-- done -->
+                    <option value="hex2bin">Hexadecimal to Binary</option> <!-- done -->
+                </select>
+            <input type="button" value="Select" id="selected" class="btn">
+            <br>
+            <input type="text" name="" id="input-value" class="input">
+            <input type="button" value="Convert" id="convert" class="btn">
+            <br>
+            <span id="conversion-name"></span>
+            <input type="text" name="" id="output-value" class="input" readonly>
+            <input type="button" value="copy" id="copy" class="input">
+        </p>
+        </form>
+        </div>
+
+    <script src="script/methods.js"></script>
+    <script src="script/app.js"></script>
+</body>
+</html>
