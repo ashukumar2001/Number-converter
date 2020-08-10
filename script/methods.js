@@ -10,7 +10,7 @@ function hex2dec(hex) {
 
 // Decimal to Binary
 function dec2bin(dec) {
-    return Number((dec>>>0).toString(2));
+    return (dec>>>0).toString(2);
 }
 
 // Decimal to Hexadecimal
@@ -25,7 +25,7 @@ function bin2hex (bin) {
 
 // Hexadecimal to Binary
 function hex2bin (hex) {
-    return Number(parseInt(hex, 16).toString(2));
+    return parseInt(hex, 16).toString(2);
 }
 
 // function to make copy button

@@ -42,6 +42,7 @@ document.getElementById("selected").addEventListener('click', function() {
         document.getElementById("convert").addEventListener('click', function() {
             inputValue = document.getElementById("input-value").value;
             inputValue = inputValue.toString();
+            console.log(inputValue);
             document.getElementById("output-value").value = hex2bin(inputValue);
         });
     }else if(selected === "bin2hex") { //Binary to Hexadecimal 
