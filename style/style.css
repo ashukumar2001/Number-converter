@@ -1,40 +1,56 @@
 * {
+
     font-family: monospace;
+    font-size: 16px; 
+}
+html {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: rgb(144, 225, 255);
 }
 div.content {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    width: 90%;
+    width: 50%;
     margin: auto;
     padding: 1rem;
-    border: 1px solid rgb(0, 110, 178);
+    /* border: 1px solid rgb(0, 110, 178); */
     border-radius: 15px;
-    background-color: rgba(31, 207, 255, 1);
+    /* background-color: rgba(31, 207, 255, 1); */
+    background-color: rgb(16, 255, 112);
 }
 
+.display-flex {
+    display: flex;
+}
 /* style for main heading  */
 h1 {
     text-align: center;
-    font-family: 'Times New Roman', Times, serif;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 #color-red {
     color: red;
+    font-family: cursive;
 }
 
 form.form {
-    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 
 }
 
+#input-value {
+    margin-top: 1rem;
+}
+
 div.output {
     /* border: 1px solid black; */
-    display: flex;
     justify-content: center;
     align-items: center;
 }
@@ -43,17 +59,16 @@ div.output {
 .btn { 
     text-decoration: none; 
     border: none; 
-    /* border-color: rgb(255, 115, 0); */
     padding: 8x 20px; 
     margin: 0.5rem;
-    font-size: 16px; 
     background-color: rgb(255, 115, 0); 
     color: rgb(255, 255, 255); 
     border-radius: 3px; 
-    /* box-shadow: 7px 6px 28px 1px rgba(0, 0, 0, 0.24);  */
+    cursor: pointer; 
+    cursor: pointer; 
     cursor: pointer; 
     outline: none; 
-    transition: 0.2s all; 
+    transition: 0.1s all; 
 } 
 /* Adding transformation when the button is active */ 
 .btn:active, #copy:active { 
@@ -63,20 +78,17 @@ div.output {
     /* Lowering the shadow */ 
 } 
 
-select#methods, #input-value {
-    /* border: 1px solid black; */
-    box-shadow: 0px 0px 3px rgb(0, 78, 111);
+.shadow {
+    box-shadow: 0px 0px 1px rgb(31, 31, 31);
 }
 
 /* Adding some basic styling to input */
 .input {
-    /* border-radius: 10px; */
     padding: 8px 20px;
     border: none;
     color: rgb(37, 37, 37);
     font-weight: 600;
     outline: none;
-    /* text-align: center; */
 }
 
 /* Style of conversion name in output */
@@ -89,7 +101,6 @@ span#conversion-name, span#enter-number {
 /* addition style for output-value input */
 #output-value {
     height: 100px;
-    /* width: 100%; */
     overflow: hidden;
     border-radius: 5px;
     border: none;
@@ -102,16 +113,15 @@ span#conversion-name, span#enter-number {
     align-self: flex-start;
     background-color: rgb(255, 115, 0);
     color: rgb(255, 255, 255);
-    transition: 0.2s all;
-    /* border-radius: 3px; */
     border-top-right-radius: 3px;
-    /* margin: 0.4rem; */
+    border-bottom-left-radius: 3px;
+    transition: 0.1s all;
 }
 
 div#output-value-wrapper {
     /* border: 1px solid red; */
-    display: flex;
     justify-content: center;
+    border-top-right-radius: 3px;
     align-items: center;
     background-color: white;
 }
@@ -119,15 +129,26 @@ div#output-value-wrapper {
 
 /* Only for small phones  */
 @media (max-width: 400px) {
+    div.content {
+        width: 90%;
+    }
     div.output {
         flex-direction: column;
         margin: 0.1rem;
     }
     div#output-value-wrapper {
-        flex-direction: column;
+        flex-direction: column-reverse;
         margin-top: 1rem;
     }
-    button#copy {
-        align-self: flex-end;        
+    #copy {
+        /* for top-right corner */
+        align-self: flex-end;  
+    }
+    
+}
+
+@media (min-width: 401px) and (max-width: 720px) {
+    div.content {
+        width: 80%;
     }
 }

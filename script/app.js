@@ -62,4 +62,4 @@ document.getElementById("selected").addEventListener('click', function() {
     }
 });
 
-document.querySelector("#copy").addEventListener('click', copy); // to copy output value
+document.querySelector("input#copy").addEventListener('click', copy); // to copy output value

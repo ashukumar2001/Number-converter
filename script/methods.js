@@ -30,7 +30,7 @@ function hex2bin (hex) {
 
 // function to make copy button
 function copy() {
-    var copyText = document.querySelector("#output-value");
+    var copyText = document.querySelector("input#output-value");
     copyText.select();
     document.execCommand("copy");
 }
