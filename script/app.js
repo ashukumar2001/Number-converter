@@ -6,7 +6,6 @@ document.getElementById("conversion-name").innerHTML = conversionName + " : ";
 
 document.getElementById("selected").addEventListener('click', function() {
     selected = sel.options[sel.selectedIndex].value;
-    
     if(selected === "hex2dec") { // Hexadecimal to Decimal
     document.getElementById("enter-number").innerHTML = "Enter Hexdecimal Number : ";
         conversionName = sel.options[sel.selectedIndex].text;
