@@ -35,7 +35,10 @@ function copy() {
     document.execCommand("copy");
 }
 
-
+function resetHandler () {
+    document.getElementById("input-value").value = "";
+    document.getElementById("output-value").value = "";
+}
 
 
 

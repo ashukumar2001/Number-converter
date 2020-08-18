@@ -14,7 +14,7 @@ document.getElementById("selected").addEventListener('click', function() {
         document.getElementById("convert").addEventListener('click', function() {
             inputValue = document.getElementById("input-value").value;
             inputValue = inputValue.toString(); // inputValue converted to string because hex value give error
-            document.getElementById("output-value").value = hex2dec(inputValue); // printing output
+            hexValidator(inputValue, hex2dec);
         });
     } else if(selected === "dec2bin") { // Decimal to Binary
         document.getElementById("enter-number").innerHTML = "Enter Decimal Number : ";
@@ -22,7 +22,7 @@ document.getElementById("selected").addEventListener('click', function() {
         document.getElementById("conversion-name").innerHTML = conversionName + " : ";
         document.getElementById("convert").addEventListener('click', function() {
             inputValue = document.getElementById("input-value").value;
-            document.getElementById("output-value").value = dec2bin(inputValue); // printing output
+            decValidator(inputValue, dec2bin);
         });
     }else if(selected === "bin2dec") { // Binary to Decimal
         document.getElementById("enter-number").innerHTML = "Enter Binary Number : ";
@@ -30,7 +30,7 @@ document.getElementById("selected").addEventListener('click', function() {
         document.getElementById("conversion-name").innerHTML = conversionName + " : ";
         document.getElementById("convert").addEventListener('click', function() {
             inputValue = document.getElementById("input-value").value;
-            document.getElementById("output-value").value = bin2dec(inputValue); // printing output
+            binValidator(inputValue, bin2dec);
         });
     }else if(selected === "dec2hex") { // Decimal to Hexadecimal
         document.getElementById("enter-number").innerHTML = "Enter Decimal Number : ";
@@ -38,7 +38,7 @@ document.getElementById("selected").addEventListener('click', function() {
         document.getElementById("conversion-name").innerHTML = conversionName + " : ";
         document.getElementById("convert").addEventListener('click', function() {
             inputValue = document.getElementById("input-value").value;
-            document.getElementById("output-value").value = dec2hex(inputValue); // printing output
+            decValidator(inputValue, dec2hex);
         });
     }else if(selected === "hex2bin") { // Hexadecimal to Binary
     document.getElementById("enter-number").innerHTML = "Enter Hexdecimal Number : ";
@@ -48,8 +48,7 @@ document.getElementById("selected").addEventListener('click', function() {
         document.getElementById("convert").addEventListener('click', function() {
             inputValue = document.getElementById("input-value").value;
             inputValue = inputValue.toString();
-            console.log(inputValue);
-            document.getElementById("output-value").value = hex2bin(inputValue);
+            hexValidator(inputValue, hex2bin);
         });
     }else if(selected === "bin2hex") { //Binary to Hexadecimal 
         document.getElementById("enter-number").innerHTML = "Enter Binary Number : ";
@@ -57,9 +56,10 @@ document.getElementById("selected").addEventListener('click', function() {
         document.getElementById("conversion-name").innerHTML = conversionName + " : ";
         document.getElementById("convert").addEventListener('click', function() {
             inputValue = document.getElementById("input-value").value;
-            document.getElementById("output-value").value = bin2hex(inputValue);
+            binValidator(inputValue, bin2hex);
         });
     }
 });
 
 document.querySelector("input#copy").addEventListener('click', copy); // to copy output value
+document.getElementById("reset").addEventListener('click', resetHandler); // top reset the previous data
